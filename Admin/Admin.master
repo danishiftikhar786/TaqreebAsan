@@ -1,0 +1,150 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin.master.cs" Inherits="Admin_Admin" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+
+    
+    <link  href="../website_images/favico.ico" sizes="72x72" rel="icon" type="image/png" />
+    <link  href="../App_Themes/Main_web/css/bootstrap.min.css" type="text/css" rel="Stylesheet"/>
+    <link  href="../App_Themes/Main_web/css/small-business.css" type="text/css" rel="Stylesheet"/>
+    <link  href="../App_Themes/Main_web/css/bootstrap.css" type="text/css" rel="Stylesheet"/>
+    
+    <script src="../App_Themes/Main_web/js/jquery-1.11.0.js" type="text/javascript"> </script>
+    <script src="../App_Themes/Main_web/js/bootstrap.min.js" type="text/javascript"> </script>
+    <style>
+    .filter_bg_color
+     {
+         background-color: #fcfcfc;
+      
+     }
+     .label_filter
+     {
+		      color:#888;
+     }
+     .label_list_name
+     {
+      color:#2A3F55;
+     }
+     
+    /* a{
+         
+     color:#888; !important;
+     border-color:Orange; !important;
+     }   
+     a:hover{ 
+     color: #abda0f; !important;
+     border-color:Orange; !important;
+    
+      }*/
+      
+      .btn_color
+      {
+          background-color: #abda0f;/*1*/
+          color:White;/*1*/
+           /*background-color:#F9A646;*/
+      }
+      .btn_color:hover
+      {
+          background-color: #abda0f;/*1*/
+          color:Gray;/*1*/
+           /*background-color:#F9A646;*/
+      }
+      .border
+      {
+          border:1px;
+          border-color:White;
+      }
+     .div_list
+     {
+         background-color: #FFFFFF;
+         border-style:groove;  
+         border-width: 1px; 
+         border-color:Gray;
+     }
+     .div_list:hover
+     {
+       background-color: #FBFBFB;
+       border-style:groove;  
+       border-width: 1px; 
+       border-color:Orange;    
+     }
+    .white
+    {
+        color:White;
+        
+       
+    }
+    
+    .text_color1
+    {
+        color:#888;
+    }
+     .text_color2
+    {
+        color:#888;
+    }
+    
+    .list_heading
+    {
+        color:#FFAD33;
+    }
+    
+    .gray
+    {
+        background-color:#f4f6f9;
+    }
+    .green
+    {
+       background-color: #abda0f;
+       /* background-color:#E2DA99;*/
+    }
+   </style>
+</head>
+<body>
+<div  class="filter_bg_color"   style="border-style: outset; border-width: 1px; color:#888; box-shadow: 5px 2px 5px #888888;">
+    <nav class="navbar" role="navigation">
+    <div><a href="Default.aspx" class="navbar-brand"><img  src="../website_images/logo-00cf9f7ce65e78525dfa239deb62bfbd.png"/></a></div>
+    <div id="navbar" class="navbar-collapse collapse left">
+                    <ul style="float:right;" class="nav navbar-nav">
+                        <li ><a class="navbar-btn btn" href="#">Welcome Admin!<b><asp:Label ID="name" runat="server"></asp:Label></b></a></li>
+                        <li ><a class="navbar-btn btn" href="Setting.aspx"><b>Settings</b></a></li>
+                        <li ><a class="navbar-btn btn"href="#"><b>Inbox</b></a></li>
+                        <li ><a class="navbar-btn btn"href="Login.aspx"> <b>Logout</b></a></li>
+                    </ul>
+                    
+                </div>
+    </nav>
+</div>
+
+<div class="" style=" padding:2%;">
+<div class="col-lg-2 well">
+        <div class="navbar-brand"> Dash Board!</div>
+       <div class="navbar-left">
+                    <ul class="nav ">
+                        <li><a href="Servcie_Providers.aspx"><b>Service Provider</b></a></li>
+                        <li ><a href="#"><b>Clients</b></a></li>
+                        <li><a href="NewRequest.aspx"><b>New Service Provider Request!</b></a></li>
+                        <li><a href="New_Dish.aspx"><b>New Dish</b></a></li>
+                        
+                    </ul>
+                </div>
+        
+    </div>
+</div>
+
+
+    <form id="form1" runat="server">
+    <div>
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+</body>
+</html>

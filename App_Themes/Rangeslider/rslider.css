@@ -1,0 +1,20 @@
+﻿div.info {
+    margin: 0 0 10px 0;
+    padding: 0;
+}
+.RadSlider, 
+.sliderValue {
+    display: inline-block;
+}
+.sliderValue {
+    width: 20px;
+    vertical-align: top;
+    padding-top: 2px;
+}
+.RadSlider_BlackMetroTouch, 
+.RadSlider_MetroTouch {
+    padding: 0 0 0 20px !important;
+}
+hr {
+    margin: 20px 0 10px 0;
+}

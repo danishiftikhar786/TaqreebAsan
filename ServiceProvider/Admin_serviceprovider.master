@@ -1,0 +1,244 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Admin_serviceprovider.master.cs" Inherits="ServiceProvider_Admin_serviceprovider" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>TaqreebAsan</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+   
+    <link  href="../website_images/favico.ico" sizes="72x72" rel="icon" type="image/png"/>
+
+
+     <link rel="Stylesheet" type="text/css" href="../App_Themes/uploadify/CSS/uploadify.css" />
+
+    <!-- Bootstrap Core CSS -->
+    
+    <link href="../App_Themes/Amin_theme/css/bootstrap.min.css" rel="stylesheet"/>
+
+    <!-- Custom CSS -->
+    <link href="../App_Themes/Amin_theme/css/sb-admin.css" rel="stylesheet"/>
+
+    <!-- Morris Charts CSS -->
+    <link href="../App_Themes/Amin_theme/css/plugins/morris.css" rel="stylesheet"/>
+       
+    <link href="../App_Themes/jquery-ui-1.11.2.custom/jquery-ui.css" rel="Stylesheet" />
+
+    <!-- Custom Fonts -->
+    <link href="../App_Themes/Amin_theme/font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet"/>
+
+    <!--  gallery view-->
+    <link href="../App_Themes/Minimal-jQuery-Image-Gallery-Lightbox-Plugin-maxGallery/css/css.css" rel="Stylesheet" />
+    <script  type="text/javascript" src="../App_Themes/jquery-ui-1.11.2.custom/external/jquery/jquery.js"></script>
+    <script  type="text/javascript" src="../App_Themes/jquery-ui-1.11.2.custom/jquery-ui.js"></script>
+
+    
+
+    <!--css fo uploadify-->
+    
+    <style>
+        
+        .filter_bg_color
+     {
+         background-color: #fcfcfc;
+      
+     }
+     .label_filter
+     {
+		      color:#888;
+     }
+     .label_list_name
+     {
+      color:#2A3F55;
+     }
+     
+     a{
+         
+     color:#888; !important;
+     border-color:Orange; !important;
+     }   
+     a:hover{ 
+     color: Red; !important;
+     border-color:Orange; !important;
+    
+      }
+      
+      .btn_color
+      {
+          background-color: #abda0f;/*1*/
+          color:White;/*1*/
+           /*background-color:#F9A646;*/
+      }
+      .btn_color:hover
+      {
+          background-color: #abda0f;/*1*/
+          color:Gray;/*1*/
+           /*background-color:#F9A646;*/
+      }
+      .border
+      {
+          border:1px;
+          border-color:White;
+      }
+    
+    .white
+    {
+        color:White;
+        
+       
+    }
+    
+    .text_color1
+    {
+        color:#888;
+    }
+     .text_color2
+    {
+        color:#888;
+    }
+    
+    .list_heading
+    {
+        color:#FFAD33;
+    }
+    
+    .gray
+    {
+        background-color:#f4f6f9;
+    }
+    .green
+    {
+       /*background-color: #abda0f;*/
+        background-color:#E2DA99;
+    }
+    
+  
+    ul.nav a:hover{
+     background-color:#3A3E45;!important; 
+     color:#FFFFFF; !important;
+	 
+      } 
+  .side-nav li a:hover, .side-nav li a:focus {
+   outline : none;
+   background-color : #3A3E45 !important;
+}
+     
+    
+    .web
+    {
+        color:#f0ad4e;
+    }
+    .invisible
+    {
+        visibility:hidden;
+    }
+   
+    
+    </style>
+</head>
+<body style=" background-color:White;">
+
+   
+    <div id="wrapper">
+    <form id="form1" runat="server">
+        <!-- Navigation -->
+        <nav class="navbar navbar-inverse navbar-fixed-top filter_bg_color" role="navigation" >
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header" >
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a  href="Default.aspx"><img src="../website_images/logo-00cf9f7ce65e78525dfa239deb62bfbd.png"  height="50px" style="float:inherit;"/></a>
+            </div>
+            
+            <!-- Top Menu Items -->
+            <ul class="nav navbar-right top-nav filter_bg_color">
+               
+                
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-user  gray web"></i><asp:Label  runat="server" ID="name" ></asp:Label><b class="caret white"></b></a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="Setting.aspx"><i class="fa fa-fw fa-user"></i> Profile</a>
+                        </li>
+                        <li>
+                            <a href="#"><i class="fa fa-fw fa-envelope "></i> Inbox</a>
+                        </li>
+                        <li>
+                            <a href="Setting.aspx"><i class="fa fa-fw fa-gear"></i> Settings</a>
+                        </li>
+                        <li class="divider"></li>
+                        <li>
+                            <a href="Login.aspx"><i class="fa fa-fw fa-power-off"></i> Log Out</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+           
+            <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
+            <div   class="collapse navbar-collapse navbar-ex1-collapse" >
+                <ul  style=" padding-top:6%; background-color:White;" class="nav navbar-nav side-nav">
+                    <li>
+                        <a href="Default.aspx"><i class="fa fa-fw fa-home fa-2x  web"></i>Home</a>
+                    </li>
+                    <li>
+                        <a href="Orders.aspx"><i class="fa fa-fw fa-bar fa-shopping-cart fa-2x  web"></i>Orders<span id="order_badge" runat="server" class="badge bg-danger"></span></a>
+                    </li>
+                  <li>
+                        <a href="#" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-book  fa-2x web"></i> Menu Book <i class="fa fa-fw fa-caret-down  web"></i></a>
+                        <ul id="demo" class="collapse">
+                            <li>
+                                <a href="Dishes.aspx"> <i class="fa fa-fw fa-cutlery fa-2x  web"></i>Dishes</a>
+                            </li>
+                            <li>
+                                <a href="Menu.aspx"><i class="fa fa-fw  fa-list-alt  fa-2x web"></i>Menus</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <li>
+                        <a href="Images.aspx"><i class="fa fa-fw fa-photo fa-2x  web"></i>Images</a>
+                    </li>
+                    <li>
+                        <a href="Map.aspx"><i class="fa fa-fw fa-globe fa-2x  web"></i> Map</a>
+                    </li>
+                    <li>
+                                            <a href='<%=ResolveUrl("~/Profile/")%><%=name.Text%>' target="_blank"><i class="fa fa-fw  fa-eye fa-2x  web"></i>Profile View</a>
+                    
+                    </li>
+                      <li>
+                            <a href="Setting.aspx"><i class="fa fa-fw fa-gear fa-2x  web"></i> Settings</a>
+                        </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+         </nav>
+
+        <br />
+        <br />
+        <br />
+        <br />
+    
+    <!-- /#wrapper -->
+     
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </form>
+    </div>
+    
+    <%--<script src="../App_Themes/Amin_theme/js/jquery-1.11.0.js"></script>--%>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="../App_Themes/Amin_theme/js/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <script src="../App_Themes/Amin_theme/js/plugins/morris/raphael.min.js"></script>
+    <script src="../App_Themes/Amin_theme/js/plugins/morris/morris-data.js"></script>
+    
+</body>
+</html>
